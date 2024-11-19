@@ -1,13 +1,14 @@
 
 // Table.jsx
 import React, { useState } from "react";
-import todoStore from "../store/todoListStore";
 import { format } from "date-fns";
 import { useTranslation } from "react-i18next";
-
+import { useSelector, useDispatch } from 'react-redux';
+import { removeTask, toggleTaskStatus, updateTask } from '../store/todoListStore';
 
 function Table() {
-    const { todoList, removeTask, toggleTaskStatus, updateTask } = todoStore();
+    const todoList = useSelector((state) => state.todo.todoList);
+    const dispatch = useDispatch();
     const [editingTask, setEditingTask] = useState(null);
     const [editFormData, setEditFormData] = useState({
         name: "",
@@ -33,7 +34,7 @@ function Table() {
     };
 
     const handleEditSubmit = (id) => {
-        updateTask(id, editFormData);
+        dispatch(updateTask(id, editFormData));
         setEditingTask(null);
     };
 
@@ -45,6 +46,16 @@ function Table() {
         }
     };
     const { t } = useTranslation()
+
+    const handleRemoveTask = (id) => {
+        dispatch(removeTask(id));
+    };
+
+    const handleToggleStatus = (id) => {
+        dispatch(toggleTaskStatus(id));
+    };
+
+   
     return (
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -89,7 +100,7 @@ function Table() {
                             </td>
                             <td className="px-6 py-3">
                                 <button
-                                    onClick={() => toggleTaskStatus(task.id)}
+                                    onClick={() => handleToggleStatus(task.id)}
                                     className={`
                                         inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium
                                         ${task.completed
@@ -139,7 +150,7 @@ function Table() {
                                             Edit
                                         </button>
                                         <button
-                                            onClick={() => removeTask(task.id)}
+                                            onClick={() => handleRemoveTask(task.id)}
                                             className="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                                         >
                                             Delete
