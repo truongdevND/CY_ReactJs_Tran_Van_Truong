@@ -1,0 +1,22 @@
+{
+  "TODOLIST": "TODO LIST",
+  "STT": "No.",
+  "TaskName": "Task Name",
+  "TaskContent": "Task Content",
+  "Status": "Status",
+  "Date": "Date",
+  "Action": "Action",
+  "AddTask": "Add Task",
+  "Edit": "Edit",
+  "Delete": "Delete",
+  "Finished": "Finished",
+  "Unfinished": "Unfinished",
+  "AddNewTask": "Add New Task",
+  "TaskName": "Task Name",
+  "TaskContent": "Task Content",
+  "Deadline": "Deadline",
+  "Cancel": "Cancel",
+  "AddTask": "Add Task",
+  "Save":"Save",
+  "Edit":"Edit"
+}

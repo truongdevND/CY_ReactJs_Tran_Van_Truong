@@ -1,0 +1,20 @@
+{
+  "TODOLIST": "할 일 목록",
+  "STT": "번호",
+  "TaskName": "작업 이름",
+  "TaskContent": "작업 내용",
+  "Status": "상태",
+  "Date": "날짜",
+  "Action": "작업",
+  "Add_Task": "작업 추가",
+  "Edit": "편집",
+  "Delete": "삭제",
+  "Finished": "완료",
+  "Unfinished": "미완료",
+  "AddNewTask": "새 작업 추가",
+  "TaskName": "작업 이름",
+  "TaskContent": "작업 내용",
+  "Deadline": "마감일",
+  "Cancel": "취소",
+  "AddTask": "작업 추가"
+}

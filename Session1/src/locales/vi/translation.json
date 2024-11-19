@@ -1,0 +1,20 @@
+{
+  "TODOLIST": "DANH SÁCH CÔNG VIỆC",
+  "STT": "STT",
+  "TaskName": "Tên Công Việc",
+  "TaskContent": "Nội Dung Công Việc",
+  "Status": "Trạng Thái",
+  "Date": "Ngày",
+  "Action": "Hành Động",
+  "Add_Task": "Thêm Công Việc",
+  "Edit": "Chỉnh Sửa",
+  "Delete": "Xóa",
+  "Finished": "Hoàn Thành",
+  "Unfinished": "Chưa Hoàn Thành",
+  "AddNewTask": "Thêm Công Việc Mới",
+  "TaskName": "Tên Công Việc",
+  "TaskContent": "Nội Dung Công Việc",
+  "Deadline": "Hạn Chót",
+  "Cancel": "Hủy",
+  "AddTask": "Thêm Công Việc"
+}
